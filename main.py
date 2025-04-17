@@ -51,5 +51,6 @@ async def ticket(ctx):
 keep_alive()
 
 # Paste your bot token between the quotes
-bot.run(os.getenv("MTM2MjAyMDI3NzA2Mzc3ODMyNA.GZbUEW.v1udzwnd3sXjC8HA2i2kOwAyl5QnHOlBptwLYQ"))
+bot.run(os.getenv("DISCORD_TOKEN"))
+
 
