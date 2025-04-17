@@ -1,5 +1,3 @@
-import os
-import json
 import discord
 from discord.ext import commands
 import gspread
@@ -16,6 +14,7 @@ import json
 creds_json = os.getenv("GOOGLE_CREDS_JSON")
 creds_dict = json.loads(creds_json)
 creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+
 client = gspread.authorize(creds)
 
 # Replace with your actual Google Sheet URL
@@ -50,4 +49,5 @@ async def ticket(ctx):
 keep_alive()
 
 # Paste your bot token between the quotes
-bot.run("MTM2MjAyMDI3NzA2Mzc3ODMyNA.GZbUEW.v1udzwnd3sXjC8HA2i2kOwAyl5QnHOlBptwLYQ")
+bot.run(os.getenv("MTM2MjAyMDI3NzA2Mzc3ODMyNA.GZbUEW.v1udzwnd3sXjC8HA2i2kOwAyl5QnHOlBptwLYQ"))
+
